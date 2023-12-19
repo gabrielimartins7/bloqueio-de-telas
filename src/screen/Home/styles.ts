@@ -5,5 +5,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#020617'
+  },
+  Title: {
+    fontSize: 24,
+    color: '#FFFFFF',
+    marginBottom: 12,
   }
 });

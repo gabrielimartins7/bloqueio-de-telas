@@ -19,7 +19,7 @@ export function useScreenGuard(screenName: string){
     }
 
     useEffect(() => {
-        if(sessionTime < 10){
+        if(sessionTime < 5){
             const timer = setTimeout(() => {
                 setSessionTime(prevState => prevState + 1);
                 console.log(sessionTime);

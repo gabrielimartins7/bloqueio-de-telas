@@ -1,18 +1,21 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Text, View, Image } from 'react-native';
+
+import Duck from '../../assets/duck.png';
+
+import { Button } from '../../components/Button';
 
 import { styles } from './styles';
-import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
   const { navigate } = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Button
-        title="IR PARA CONTACT"
-        onPress={() => navigate('Contact')}
-      />
+      <Image source={Duck} style={{ width: 60, height: 60, marginBottom: 18 }} />
+      <Text style={styles.Title}>DucksBank</Text>
+      <Button onPress={() => navigate('Contact')} />
     </View>
   );
 }
